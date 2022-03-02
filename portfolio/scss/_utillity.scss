@@ -1,0 +1,28 @@
+/* 반응형 화면 크기 */
+$mobile: 550px;
+$pad: 1279px;
+$desktop: 1280px;
+
+/* 반응형, 모바일 기준 기준 360 */
+@mixin mobile{
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+/* 반응형, 패드, 세로 */
+@mixin pad{
+    @media screen and (min-width: $mobile) and (max-width: $pad) {
+        @content;
+    }
+}
+
+/* 반응형, 데스크탑 */
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+/* 리소스 경로 */
+$img-url: "../resource/img/";

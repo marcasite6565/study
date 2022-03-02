@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/main.scss">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/bc46dc61ce.js" crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./resource/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resource/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resource/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./resource/img/favicon_io/site.webmanifest">
+
+    <title>LHY Portfolio</title>
+</head>
+<body>
+    <div class="index">
+        <ul class="index__list">
+            <li><a href="#welcome"><div class="index__circle"></div><div class="index__text">Welcome</div></a></li>
+            <li><a href="#about"><div class="index__circle"></div><div class="index__text">About</div></a></li>
+            <li><a href="#skills"><div class="index__circle"></div><div class="index__text">Skills</div></a></li>
+            <li><a href="#portfolio"><div class="index__circle"></div><div class="index__text">Portfolio</div></a></li>
+            <li><a href="#contact"><div class="index__circle"></div><div class="index__text">Contact</div></a></li>
+        </ul>
+        <button class="index__openBtn"></button>
+    </div>
+    <section id="welcome" class="welcome">
+        <div class="welcome__txt">
+            <div class="welcome__hello"></div>
+            2년차 프론트엔드 개발자, 이희연입니다.
+            <br/>
+            <button class="btn welcome__btn" type="button" onclick="location.href='#about'">
+                자세히보기
+            </button>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="contents">
+            <div class="title">About Me</div>
+            <div class="about__info">
+                <div class="about__detail about__detail--icon"><i class="fa-solid fa-user fa-2x"></i></div>
+                <div class="about__detail about__detail--text">이름<br/>이희연</div>
+                <div class="about__detail about__detail--icon"><i class="fa-solid fa-calendar-days fa-2x"></i></div>
+                <div class="about__detail about__detail--text">나이<br/>25세(1997년생)</div>
+                <div class="about__detail about__detail--icon"><i class="fa-solid fa-location-dot fa-2x"></i></div>
+                <div class="about__detail about__detail--text">주소지<br/>성남시 수정구</div>
+                <div class="about__detail about__detail--icon"><a href="#contact"><i class="fa-solid fa-envelope fa-2x"></i></a></div>
+                <div class="about__detail about__detail--text">이메일<br/><p class="about__detail--mail">marcasite6565<br/>@gmail.com</p></div>
+                <div class="about__detail about__detail--icon"><i class="fa-solid fa-pencil fa-2x"></i></div>
+                <div class="about__detail about__detail--text">학력<br/>동덕여자대학교<br/>정보통계학과 졸업</div>
+                <div class="about__detail about__detail--icon"><i class="fa-solid fa-briefcase fa-2x"></i></div>
+                <div class="about__detail about__detail--text">경력<br/>1년 6개월</div>
+            </div>
+            <div class="about__text">
+                2년차 웹 개발자로, 웹 서비스를 배포, 운영하는 일을 주로 하였습니다.<br/><br/>
+                큰 규모의 홈페이지의 유지보수 작업의 경력이 있어 다양한 부서의 동료들과 커뮤니케이션을 진행하고, 그것을 홈페이지에 반영하는 작업에 익숙합니다.<br/><br/>
+                업무 중 기존에 배웠던 것이 아닌 새로운 것을 마주해도, 빠른 습득력과 열정으로 배워나가고자 합니다.<br/>
+                HTML, CSS, PHP 및 MS-SQL 위주의 스킬을 가지고 입사한 곳에서 요구한 JSP 및 Oracle로 작성된 웹의 유지보수에 금방 익숙해지기도 했습니다.<br/>
+                현재는 HTML, CSS, JavaScript에 대한 지속적인 학습은 물론, 최근 React와 Sass(SCSS)에 대해 학습하고 있습니다.<br/><br/>
+                웹코딩에 대한 기초를 탄탄히 하고, 웹 표준성 및 웹 접근성을 향상시킬 수 있도록 더 구조적이고 깔끔한 코드를 작성하기 위해 계속해서 노력합니다.
+            </div>
+            <button class="btn about__btn" type="button" onclick="window.open('https://drive.google.com/file/d/1Ino3i6hROpPrl0FKxD3jSwgfni6tv_QE/view?usp=sharing')"><i class="fa-solid fa-id-card"></i> 이력서</button>
+            <button class="btn about__btn" type="button" onclick="window.open('https://github.com/marcasite6565')"><i class="fa-brands fa-github"></i> GITHUB</button>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="contents">
+            <div class="title">Skills</div>
+            <div class="skills__boxes">
+                <div class="skills__box">
+                    Front-End
+                    <div class="skills__list">
+                        <img src="./resource/img/fe3.png" alt="HTML5, CSS3, JavaScript" />
+                        <img src="./resource/img/sass.png" alt="Sass" />
+                        <img src="./resource/img/PHP.png" alt="PHP" />
+                        <img src="./resource/img/jsp.png" alt="JSP" />
+                        <img src="./resource/img/react.svg" alt="React" />
+                    </div>
+                </div>
+                <div class="skills__box" style="width: 49%;">
+                    DB
+                    <div class="skills__list">
+                        <img src="./resource/img/MySQL.png" alt="MySQL" />
+                        <img src="./resource/img/oracle.svg" alt="Oracle" class="skills__img--sizedown"/>
+                    </div>
+                </div>
+                <div class="skills__box" style="width: 49%;">
+                    Version Control
+                    <div class="skills__list">
+                        <img src="./resource/img/git.svg" alt="Git" />
+                        <img src="./resource/img/github.svg" alt="GitHub" />
+                    </div>
+                </div>
+                <div class="skills__box">
+                    ETC
+                    <div class="skills__list">
+                        <img src="./resource/img/python.svg" alt="Python" />
+                        <img src="./resource/img/adobe_photoshop.svg" alt="Adoebe Photoshop" />
+                        <img src="./resource/img/adobe_illustrator.svg" alt="Adoebe Illustrator" />
+                        <img src="./resource/img/figma.svg" alt="Figma" />
+                        <img src="./resource/img/google.png" alt="Google Analytics" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <div class="contents">
+            <div class="title" style="margin: 0 auto;">Portfolio</div>
+            <div class="title--little">각 항목 클릭 시 자세한 설명이 나옵니다.</div>
+            <div class="portfolio__slide">
+            <div class="portfolio__arrow portfolio__arrow--prev" id="prev"><i class="fa-solid fa-chevron-left fa-3x"></i></div>
+            <div class="portfolio__slider">
+                <div class="portfolio__boxes">
+                    <div class="portfolio__box">
+                        <div class="portfolio__card portfolio__card--front">
+                            <div class="portfolio__title">포트폴리오 웹사이트</div>
+                            <div class="portfolio__contents">
+                                <img class="portfolio__img" src="./resource/img/pf_img1.png" alt="포트폴리오 이미지" />
+                                <div class="portfolio__text">
+                                    <div class="portfolio__text--key">분류</div>
+                                    <div class="portfolio__text--value">Side Project</div>
+                                    <div class="portfolio__text--key">제작시기</div>
+                                    <div class="portfolio__text--value">2022년 02월</div>
+                                    <div class="portfolio__text--key">URL</div>
+                                    <div class="portfolio__text--value">youmustg0.pe.kr/pf/</div>
+                                    <div class="portfolio__text--key">GitHub</div>
+                                    <div class="portfolio__text--value">여기에 링크 넣기2</div>
+                                    <div class="portfolio__text--key">Front-End</div>
+                                    <div class="portfolio__text--value">HTML, Sass, Vanilla JS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio__card portfolio__card--back portfolio__card--flipped">
+                            <div class="portfolio__title">포트폴리오 웹사이트</div>
+                            <div class="portfolio__contents">
+                                <div class="portfolio__text--prose">
+                                    현재 보고 계신 포트폴리오 용도의 웹사이트입니다.<br/><br/>
+                                    간단하지만 다양한 기능을 넣어보고자 했습니다.<br/><br/>
+                                    스크롤 시 섹션 별로 나눠지는 원 페이지 웹사이트입니다.<br/>
+                                    보기에 깔끔한 디자인을 목표로 하였습니다.<br/>
+                                    반응형 웹사이트로 제작되었습니다.<br/><br/>
+                                    자기소개, 인적사항, 기술스택 및 포트폴리오 등을 기재하였습니다.<br/>
+                                    포트폴리오는 한 섹션에 넣기 위해 슬라이더를 사용했으며, <br/>
+                                    간단한 form으로 홈페이지에서 바로 메일을 보낼 수 있게 하였습니다.<br/>
+                                    그 외 모달창, 고정 메뉴 등이 포함되어 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio__box">
+                        <div class="portfolio__card portfolio__card--front">
+                            <div class="portfolio__title">의정부 을지대학교 병원</div>
+                            <div class="portfolio__contents">
+                                <img class="portfolio__img" src="./resource/img/pf_img2.jpg" alt="포트폴리오 이미지" />
+                                <div class="portfolio__text">
+                                    <div class="portfolio__text--key">분류</div>
+                                    <div class="portfolio__text--value">Main Job</div>
+                                    <div class="portfolio__text--key">진행기간</div>
+                                    <div class="portfolio__text--value">2020.12.~2021.04.</div>
+                                    <div class="portfolio__text--key">URL</div>
+                                    <div class="portfolio__text--value portfolio__text--url"><a href="http://uemc.ac.kr/index.jsp" target="_blank">uemc.ac.kr/index.jsp</a></div>
+                                    <div class="portfolio__text--key">Front-End</div>
+                                    <div class="portfolio__text--value">HTML, CSS, JSP</div>
+                                    <div class="portfolio__text--key">Database</div>
+                                    <div class="portfolio__text--value">Oracle</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio__card portfolio__card--back portfolio__card--flipped">
+                            <div class="portfolio__title">의정부 을지대학교 병원</div>
+                            <div class="portfolio__contents">
+                                <div class="portfolio__text--prose">
+                                    을지대학교 웹센터에 재직하던 당시에 새로운 병원이 개원하여 진행한 프로젝트입니다.<br/><br/>
+                                    본래 맡고 있는 학교 홈페이지와 기존 병원 홈페이지 유지보수 업무로 인해 보조 역할이 되어 많은 중요 작업을 하지 않았으나,
+                                    도메인과 SSL과 같은 부분이나 백엔드나 데이터베이스, 디자이너와의 의견 교환 등
+                                    개인 프로젝트만 진행하면 간과하기 쉬운 부분과 협업에 대해 많이 배우는 기회가 되었습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__arrow portfolio__arrow--next" id="next"><i class="fa-solid fa-chevron-right fa-3x"></i></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="contents">
+            <div class="title">Contact</div>
+            <form class="gform contact__form" method="post" action="https://script.google.com/macros/s/AKfycbzvRAyo5NB53gpGLSvrP6IRtFuQfskWt3HJoveUHHlwFEr2A0M/exec">
+                <label for="mail--name">성함(소속): </label><input class="contact__input" type="text" name="mail--name" placeholder="성함 혹은 소속" required /><br/><br/>
+                <label for="mail--email">메일주소: </label><input class="contact__input" type="email" name="mail--email" placeholder="답장을 받을 메일주소" required /><br/><br/>
+                <label for="mail--text"> 내용: </label><textarea class="contact__textarea" name="mail--text" placeholder="간략하게 정보를 남겨주시면 연락드리겠습니다." required></textarea>
+                <input id="honeypot" type="text" name="honeypot" value="" />
+                <button type="submit" class="btn contact__btn">메일 보내기</button>
+            </form>
+        </div>
+        <footer>ⓒ 2022. Lee Heeyeon. All rights reserved. <br/>본 사이트는 상업적 목적이 아닌 개인의 포트폴리오 목적으로 제작되었습니다.</footer>
+    </section>
+    <div class="thankyou_message modal">
+        <div class="modal__window">
+            감사합니다!<br/> 확인 후 연락드리겠습니다.
+            <button type="button" class="btn modal__btn">닫기</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/typing.js"></script>
+    <script type="text/javascript" src="./js/form-submission-handler.js"></script>
+    <script type="text/javascript" async src="./js/modal.js"></script>
+    <script type="text/javascript" async src="./js/scroll.js"></script>
+    <script type="text/javascript" async src="./js/slider.js"></script>
+    <script type="text/javascript" async src="./js/index.js"></script>
+</body>
+</html>
+
+<!--
+    * orignal code
+    * gform: https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server#how
+-->
