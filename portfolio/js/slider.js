@@ -40,6 +40,12 @@ if (dt.matches) {
                         box[box.length-1].children[0].classList.toggle("portfolio__card--flipped");
                         box[box.length-1].children[1].classList.toggle("portfolio__card--flipped");
                     }
+                    if (box[box.length-2].children[1].classList.contains('portfolio__card--flipped') != box[0].children[1].classList.contains('portfolio__card--flipped')) {
+                        box[0].children[0].style.transition = "none";
+                        box[0].children[1].style.transition = "none";
+                        box[0].children[0].classList.toggle("portfolio__card--flipped");
+                        box[0].children[1].classList.toggle("portfolio__card--flipped");
+                    }
                     slider.style.transition = "transform 0.3s ease-out";
                     slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
                     currentIdx = sliderItem-1;
@@ -47,7 +53,9 @@ if (dt.matches) {
                         slider.style.transition = "transform 0s ease-out";
                         slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
                         box[box.length-1].children[0].style.transition = "";
-                        box[box.length-1].children[1].style.transition = "";                    
+                        box[box.length-1].children[1].style.transition = "";    
+                        box[0].children[0].style.transition = "";
+                        box[0].children[1].style.transition = "";                
                     }, 300)
                 } else if (currentIdx < 0) {
                     currentIdx = sliderItem-1;
@@ -70,7 +78,7 @@ if (dt.matches) {
                     slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
                     setTimeout(function () {
                         box[1].children[0].style.transition = "";
-                        box[1].children[1].style.transition = "";                    
+                        box[1].children[1].style.transition = "";                  
                     }, 300)
                 } else {
                     currentIdx -= 1;
@@ -93,6 +101,12 @@ if (dt.matches) {
                         box[box.length-1].children[0].classList.toggle("portfolio__card--flipped");
                         box[box.length-1].children[1].classList.toggle("portfolio__card--flipped");
                     }
+                    if (box[box.length-2].children[1].classList.contains('portfolio__card--flipped') != box[0].children[1].classList.contains('portfolio__card--flipped')) {
+                        box[0].children[0].style.transition = "none";
+                        box[0].children[1].style.transition = "none";
+                        box[0].children[0].classList.toggle("portfolio__card--flipped");
+                        box[0].children[1].classList.toggle("portfolio__card--flipped");
+                    }
                     slider.style.transition = "transform 0.3s ease-out";
                     slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
                     currentIdx = -1;
@@ -101,7 +115,23 @@ if (dt.matches) {
                         slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
                         box[box.length-1].children[0].style.transition = "";
                         box[box.length-1].children[1].style.transition = "";
+                        box[0].children[0].style.transition = "";
+                        box[0].children[1].style.transition = "";
                     }, 300)
+                } else if (currentIdx === -1) {
+                    currentIdx += 1;
+                    if (box[box.length-2].children[1].classList.contains('portfolio__card--flipped') != box[0].children[1].classList.contains('portfolio__card--flipped')) {
+                        box[box.length-2].children[0].style.transition = "none";
+                        box[box.length-2].children[1].style.transition = "none";
+                        box[box.length-2].children[0].classList.toggle("portfolio__card--flipped");
+                        box[box.length-2].children[1].classList.toggle("portfolio__card--flipped");
+                    }
+                    slider.style.transition = "transform 0.3s ease-out";
+                    slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
+                    setTimeout(function () {
+                        box[box.length-2].children[0].style.transition = "";
+                        box[box.length-2].children[1].style.transition = "";
+                    }, 50)
                 } else if (currentIdx > sliderItem-2) {
                     currentIdx = -1;
                     if (box[1].children[1].classList.contains('portfolio__card--flipped') != box[box.length-1].children[1].classList.contains('portfolio__card--flipped')) {
@@ -109,6 +139,12 @@ if (dt.matches) {
                         box[1].children[1].style.transition = "none";
                         box[1].children[0].classList.toggle("portfolio__card--flipped");
                         box[1].children[1].classList.toggle("portfolio__card--flipped");
+                    }
+                    if (box[box.length-2].children[1].classList.contains('portfolio__card--flipped') != box[0].children[1].classList.contains('portfolio__card--flipped')) {
+                        box[box.length-2].children[0].style.transition = "none";
+                        box[box.length-2].children[1].style.transition = "none";
+                        box[box.length-2].children[0].classList.toggle("portfolio__card--flipped");
+                        box[box.length-2].children[1].classList.toggle("portfolio__card--flipped");
                     }
                     slider.style.transition = "none";
                     slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
@@ -118,6 +154,8 @@ if (dt.matches) {
                         slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
                         box[1].children[0].style.transition = "";
                         box[1].children[1].style.transition = "";
+                        box[box.length-2].children[0].style.transition = "";
+                        box[box.length-2].children[1].style.transition = "";
                     }, 50)
                 } else {
                     currentIdx += 1;
@@ -168,7 +206,6 @@ if (!dt.matches && !mobile.matches) {
             }
 
             if (x < startx && move < sliderItemWidth_web * sliderContents.length - sliderItemWidth_web) {
-                console.log('x<startx');
                 if (!timer) {
                     timer = setTimeout(function() {
                         timer = null;
@@ -179,7 +216,6 @@ if (!dt.matches && !mobile.matches) {
                     }, 300)
                 }
             } else if (x > startx && !(slider.style.transform == '' || slider.style.transform.substr(11,1) == 0)) {
-                console.log('x>startx')
                 if (!timer ) {
                     timer = setTimeout(function() {
                         timer = null;
@@ -233,7 +269,6 @@ if (mobile.matches) {
             }
 
             if (x < startx && move < sliderItemWidth_web * sliderContents.length - sliderItemWidth_web) {
-                console.log('x<startx');
                 if (!timer) {
                     timer = setTimeout(function() {
                         timer = null;
@@ -244,7 +279,6 @@ if (mobile.matches) {
                     }, 300)
                 }
             } else if (x > startx && !(slider.style.transform == '' || slider.style.transform.substr(11,1) == 0)) {
-                console.log('x>startx')
                 if (!timer ) {
                     timer = setTimeout(function() {
                         timer = null;
