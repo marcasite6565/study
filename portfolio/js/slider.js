@@ -176,53 +176,35 @@ if (!dt.matches && !mobile.matches) {
     drag_scroll(slide);
 
     function drag_scroll(p1){
-        p1.addEventListener("mousedown", e => {
+        p1.addEventListener("touchstart", e => {
             isMouseDown = true;
-            startx = e.pageX;
-            p1.style.cursor = "grabbing";
+            startx = e.touches[0].pageX;
         });
-    
-        p1.addEventListener("mouseenter", () => {
-            p1.style.cursor = "grab";
-            isMouseDown = false;
-        });
-    
-        p1.addEventListener("mousemove", e => {
+
+        p1.addEventListener("touchend", e => {
             if (!isMouseDown) return;
+
             e.preventDefault();
-            x = e.pageX;
-        });
-    
-        p1.addEventListener("mouseup", () => {
-            p1.style.cursor = "grab";
+            x = e.changedTouches[0].pageX;
+            
             isMouseDown = false;
 
-            let movelen = slider.style.transform.length;
-            let move = 0;
-            if (movelen == 17) {
-                move = slider.style.transform.substr(12,2);
-            } else if (movelen == 18) {
-                move = slider.style.transform.substr(12,3);
-            }
-
-            if (x < startx && move < sliderItemWidth_web * sliderContents.length - sliderItemWidth_web) {
+            if (x < startx && currentIdx < sliderItem-1) {
                 if (!timer) {
                     timer = setTimeout(function() {
                         timer = null;
                         currentIdx += 1;
                         slider.style.transition = "transform 0.3s ease-out";
                         slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
-                        movelen = slider.style.transform.length;
                     }, 300)
                 }
-            } else if (x > startx && !(slider.style.transform == '' || slider.style.transform.substr(11,1) == 0)) {
+            } else if (x > startx && currentIdx > 0) {
                 if (!timer ) {
                     timer = setTimeout(function() {
                         timer = null;
                         currentIdx -= 1;
                         slider.style.transition = "transform 0.3s ease-out";
                         slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
-                        movelen = slider.style.transform.length;
                     }, 300);
                 }
             }
@@ -239,53 +221,35 @@ if (mobile.matches) {
     drag_scroll(slide);
 
     function drag_scroll(p1){
-        p1.addEventListener("mousedown", e => {
+        p1.addEventListener("touchstart", e => {
             isMouseDown = true;
-            startx = e.pageX;
-            p1.style.cursor = "grabbing";
+            startx = e.touches[0].pageX;
         });
-    
-        p1.addEventListener("mouseenter", () => {
-            p1.style.cursor = "grab";
-            isMouseDown = false;
-        });
-    
-        p1.addEventListener("mousemove", e => {
+
+        p1.addEventListener("touchend", e => {
             if (!isMouseDown) return;
+
             e.preventDefault();
-            x = e.pageX;
-        });
-    
-        p1.addEventListener("mouseup", () => {
-            p1.style.cursor = "grab";
+            x = e.changedTouches[0].pageX;
+            
             isMouseDown = false;
 
-            let movelen = slider.style.transform.length;
-            let move = 0;
-            if (movelen == 17) {
-                move = slider.style.transform.substr(12,2);
-            } else if (movelen == 18) {
-                move = slider.style.transform.substr(12,3);
-            }
-
-            if (x < startx && move < sliderItemWidth_web * sliderContents.length - sliderItemWidth_web) {
+            if (x < startx && currentIdx < sliderItem-1) {
                 if (!timer) {
                     timer = setTimeout(function() {
                         timer = null;
                         currentIdx += 1;
                         slider.style.transition = "transform 0.3s ease-out";
                         slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
-                        movelen = slider.style.transform.length;
                     }, 300)
                 }
-            } else if (x > startx && !(slider.style.transform == '' || slider.style.transform.substr(11,1) == 0)) {
+            } else if (x > startx && currentIdx > 0) {
                 if (!timer ) {
                     timer = setTimeout(function() {
                         timer = null;
                         currentIdx -= 1;
                         slider.style.transition = "transform 0.3s ease-out";
                         slider.style.transform = "translateX(" + -sliderItemWidth_web * currentIdx + "px)";
-                        movelen = slider.style.transform.length;
                     }, 300);
                 }
             }
