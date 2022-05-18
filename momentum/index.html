@@ -1,0 +1,54 @@
+<!--
+강의 들었던 것을 바탕으로 보강한 코드입니다.
+강의 링크 : https://nomadcoders.co/javascript-for-beginners/
+
+이미지 소스
+0.jpg : Photo by Luca Micheli(https://unsplash.com/@lucamicheli?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
+1.jpg : Photo by John Fowler(https://unsplash.com/@wildhoney?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
+2.jpg : Photo by Benjamin Voros(https://unsplash.com/@vorosbenisop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
+
+button 디자인 및 css 코드
+https://codepen.io/yuhomyan/pen/LYNVVNO
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Moment to Do</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main">
+            <div id="clock">00:00</div>
+            <form id="login-form" class="hidden loginForm">
+                <input type="text" placeholder="사용자 이름을 적어주세요." required maxlength="15"/>
+                <button class="button loginBtn">Log In</button>
+            </form>
+            <div id="greeting" class="hidden"></div>
+            <div id="weather" class="hidden">
+                <span></span>
+            </div>
+            <button id="todolist-Btn" class="button hidden">
+                오늘의 할일 목록
+            </button>
+        </div>
+        <div id="todo">
+            <div>
+                <form id="todo-form">
+                    <input type="text" placeholder="할일을 추가하려면, 작성 후 엔터를 눌러주세요." required />
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html>

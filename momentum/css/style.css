@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+@font-face {
+    font-family: 'Unilab';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/Unilab.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { 
+font-family: 'Unilab', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+body {
+    margin: 0;
+    
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#wrap {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#wrap::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background-color: black;
+    opacity: 0.5;
+}
+
+.background0 {
+    background-image: url(../img/0.jpg);
+}
+
+.background1 {
+    background-image: url(../img/1.jpg);
+}
+
+.background2 {
+    background-image: url(../img/2.jpg);
+}
+
+#main {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#clock {
+    color: white;
+    font-size: 200px;
+    font-family: 'Zen Loop', 'Unilab', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+
+    text-align: center;
+    color: white;
+    font-size: 28px;
+}
+
+input::placeholder {
+    color: rgb(190, 190, 190);
+}
+
+input:focus {
+    outline:none;
+}
+
+.button {
+    background: transparent;
+    color: white;
+
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: 2px solid white;
+    z-index: 1;
+
+    font-size: 28px;
+    font-weight: 900;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.button:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    color: black;
+}
+
+.button:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.button:active {
+    top: 2px;
+}
+
+#greeting {
+    color: white;
+    font-size: 40px;
+}
+
+#weather {
+    color: white;
+    font-size: 24px;
+
+    margin-top: 5px;
+}
+
+.widthChange {
+    transform: translate(-25%, -50%) !important;
+}
+
+#todo {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: -50%;
+
+    background-color: rgba(0,0,0,0.3);
+
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+
+    -webkit-user-select:text;
+    -moz-user-select:text;
+    -ms-user-select:text;
+    user-select:text;
+}
+
+.todoOpen {
+    transform: translate(-100%, -50%) !important;
+}
+
+#todo > div {
+    padding: 10px 0;
+}
+
+#todo-form {
+    height: 60px;
+    padding: 0 20px;
+}
+
+#todo-form > input {
+    width: 100%;
+}
+
+#todolist-Btn {
+    font-size: 24px;
+    font-weight: 400;
+
+    margin-top: 20px;
+}
+
+#todo-list {
+    list-style:none;
+
+    height: calc(100vh - 80px);
+    overflow: scroll;
+    margin: 0;
+    padding: 0 20px;
+}
+
+#todo-list li {
+    height: 40px;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px dashed white;
+}
+
+#todo-list li span {
+    color: white;
+    font-size: 24px;
+
+    margin-right: 10px;
+}
+
+#todo-list li button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
