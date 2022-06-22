@@ -1,0 +1,28 @@
+.movie {
+    width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.movie a {
+    color: black;
+    text-decoration: none;
+}
+
+.movie__title {
+    font-family: 'GmarketSansBold';
+    font-size: 16px;
+}
+
+.movie__coverimg {
+    width: 280px;
+}
+
+.movie__desc {
+    margin-top: 10px;
+    color: rgb(99, 99, 99);
+}

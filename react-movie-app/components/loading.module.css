@@ -1,0 +1,23 @@
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+}
+
+.loading__txt {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-family: "PyeongChangPeace-Bold";
+  border-right: 0.02em solid black;
+  animation: cursor 1s steps(1, end) infinite;
+}

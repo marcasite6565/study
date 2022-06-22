@@ -1,0 +1,43 @@
+.header {
+    position: fixed;
+    
+    width: 100vw;
+    height: 100px;
+
+    background-color: black;
+
+    z-index: 10;
+}
+
+.header__txt {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0 200px;
+    height: 100px;
+
+    font-size: 24px;
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__search {
+    width: 300px;
+
+    background-color: black;
+
+    border: 0;
+    border-bottom: 1px dashed white;
+
+    color: white;
+    font-size: 24px;
+    font-family: 'PyeongChangPeace-Bold';
+    text-align: center;
+}
+
+.header__search:focus {outline: none;}
